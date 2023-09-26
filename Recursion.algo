@@ -1,0 +1,35 @@
+FUNCTION Palin(Word:STRING) : BOOLEAN;
+VAR
+    i,j:INTEGER;
+BEGIN
+
+    i:=0;
+    j:=length(Word);
+    IF   (j<=1)  THEN
+            RETURN True;
+        ELSE IF ((Word[i]=Word[j-1]))
+        {
+            RETURN Palin(Sub_string(Word,1,length(word)-2))
+        }
+        ELSE
+            RETURN False;
+            END_IF
+        END_IF
+    END_IF
+END
+
+ALGORITHM Palindrom
+VAR
+    Word : STRING[];
+BEGIN
+    Write ("Would you write your palindrom ?");
+    Read (Word);
+
+    IF (Palin(Word) = True) THEN
+        Write("Your word is Palindrom")
+    ELSE
+        Write("Your word is not Palindrom")
+    END_IF
+
+END
+ada
